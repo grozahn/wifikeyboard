@@ -45,86 +45,56 @@ public final class KeycodeConvertor {
       case 219: return KeyEvent.KEYCODE_LEFT_BRACKET;
       case 221: return KeyEvent.KEYCODE_RIGHT_BRACKET;
       case 220: return KeyEvent.KEYCODE_BACKSLASH;
-      case 186: return KeyEvent.KEYCODE_SEMICOLON;
+      // fix SEMICOLON key: prev 186
+      case 59: return KeyEvent.KEYCODE_SEMICOLON;
+      // add GRAVE key: code 192
+      case 192: return KeyEvent.KEYCODE_GRAVE;
       case 222: return KeyEvent.KEYCODE_APOSTROPHE;
       case 8: return KeyEvent.KEYCODE_DEL;
-      case 189: return KeyEvent.KEYCODE_MINUS;
-      case 187: return KeyEvent.KEYCODE_EQUALS;
+      // fix MINUS key: prev 189
+      case 173: return KeyEvent.KEYCODE_MINUS;
+      // fix EQUAL key: prev 187
+      case 61: return KeyEvent.KEYCODE_EQUALS;
       case 191: return KeyEvent.KEYCODE_SLASH;
       case 18: return KeyEvent.KEYCODE_ALT_LEFT;
       case 16: return KeyEvent.KEYCODE_SHIFT_LEFT;
 
-      // public static final int KEYCODE_DPAD_UP = 19;
-      // public static final int KEYCODE_DPAD_DOWN = 20;
-      // public static final int KEYCODE_DPAD_LEFT = 21;
-      // public static final int KEYCODE_DPAD_RIGHT = 22;
-      // public static final int KEYCODE_DPAD_CENTER = 23;
       // arrow keys
       case 38: return KeyEvent.KEYCODE_DPAD_UP;
       case 40: return KeyEvent.KEYCODE_DPAD_DOWN;
       case 37: return KeyEvent.KEYCODE_DPAD_LEFT;
       case 39: return KeyEvent.KEYCODE_DPAD_RIGHT;
-      // Insert
-      case 112: return KeyEvent.KEYCODE_DPAD_CENTER;
-      case 45: return KeyEvent.KEYCODE_DPAD_CENTER;
-      
-      
+
       // ESC
-      case 27: return KeyEvent.KEYCODE_BACK;
-      case 116: return KeyEvent.KEYCODE_BACK;
+      case 27: return KeyEvent.KEYCODE_ESCAPE;
+      // Back
+      case 112: return KeyEvent.KEYCODE_BACK;
       // Home
+      case 91: return KeyEvent.KEYCODE_HOME;
+      // Menu
       case 113: return KeyEvent.KEYCODE_MENU;
-      
+      // Search
       case 114: return KeyEvent.KEYCODE_SEARCH;
-      // case x: return KeyEvent.KEYCODE_CALL;
-      // case x: return KeyEvent.KEYCODE_ENDCALL;
-      
-      // F9, F10
+      // Play, Previous, Next
+      case 117: return KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE;
+      case 118: return KeyEvent.KEYCODE_MEDIA_PREVIOUS;
+      case 119: return KeyEvent.KEYCODE_MEDIA_NEXT;
+      // Volume Up / Down
       case 121: return KeyEvent.KEYCODE_VOLUME_UP;
       case 120: return KeyEvent.KEYCODE_VOLUME_DOWN;
-      case KeyboardHttpServer.FOCUS: return KeyboardHttpServer.FOCUS;
-      case 36: return WiFiInputMethod.KEY_HOME;
-      case 35: return WiFiInputMethod.KEY_END;
-      case 17: return WiFiInputMethod.KEY_CONTROL;
+
+      // PgUp, PgDown
+      case 33: return KeyEvent.KEYCODE_PAGE_UP;
+      case 34: return KeyEvent.KEYCODE_PAGE_DOWN;
+
+      // Insert, delete
+      case 45: return KeyEvent.KEYCODE_INSERT;
       case 46: return WiFiInputMethod.KEY_DEL;
+
+      case KeyboardHttpServer.FOCUS: return KeyboardHttpServer.FOCUS;
+      case 17: return WiFiInputMethod.KEY_CONTROL;
 
       default: return -1;
     }
-
-    // case x: return KeyEvent.KEYCODE_SOFT_LEFT;
-    // case x: return KeyEvent.KEYCODE_SOFT_RIGHT;
-    // case x: return KeyEvent.KEYCODE_STAR;
-    // case x: return KeyEvent.KEYCODE_POUND;
-    // case x: return KeyEvent.KEYCODE_POWER;
-    // case x: return KeyEvent.KEYCODE_CAMERA;
-    // case x: return KeyEvent.KEYCODE_CLEAR;
-    // case x: return KeyEvent.KEYCODE_ALT_RIGHT;
-    // case x: return KeyEvent.KEYCODE_SHIFT_RIGHT;
-    // case x: return KeyEvent.KEYCODE_SYM;
-    // case x: return KeyEvent.KEYCODE_EXPLORER;
-    // case x: return KeyEvent.KEYCODE_ENVELOPE;
-    // case x: return KeyEvent.KEYCODE_GRAVE;
-    // case x: return KeyEvent.KEYCODE_AT;
-    // case x: return KeyEvent.KEYCODE_NUM;
-    // case x: return KeyEvent.KEYCODE_HEADSETHOOK;
-    // case x: return KeyEvent.KEYCODE_FOCUS;
-    // case x: return KeyEvent.KEYCODE_PLUS;
-    // case x: return KeyEvent.KEYCODE_NOTIFICATION;
-    // case x: return KeyEvent.KEYCODE_SEARCH;
-    // case x: return KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE;
-    // case x: return KeyEvent.KEYCODE_MEDIA_STOP;
-    // case x: return KeyEvent.KEYCODE_MEDIA_NEXT;
-    // case x: return KeyEvent.KEYCODE_MEDIA_PREVIOUS;
-    // case x: return KeyEvent.KEYCODE_MEDIA_REWIND;
-    // case x: return KeyEvent.KEYCODE_MEDIA_FAST_FORWARD;
-    // case x: return KeyEvent.KEYCODE_MUTE;
-    //
-    // META_ALT_ON = 2;
-    // META_ALT_LEFT_ON = 16;
-    // META_ALT_RIGHT_ON = 32;
-    // META_SHIFT_ON = 1;
-    // META_SHIFT_LEFT_ON = 64;
-    // META_SHIFT_RIGHT_ON = 128;
-    // META_SYM_ON = 4;
   }
 }
