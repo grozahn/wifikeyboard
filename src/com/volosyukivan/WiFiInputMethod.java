@@ -292,6 +292,17 @@ public class WiFiInputMethod extends InputMethodService {
 //      return;
 //    }
 
+    /** Support Home key event
+     * Grabbed from commit bb4790b by @AoEiuV020
+    /* https://github.com/AoEiuV020/wifikeyboard/commit/bb4790b9a0ff878258e164c3732425888fb49de4
+     */
+    if (code == KeyEvent.KEYCODE_HOME) {
+      Intent intent = new Intent(Intent.ACTION_MAIN);
+      intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+      intent.addCategory(Intent.CATEGORY_HOME);
+      startActivity(intent);
+    }
+
     conn.sendKeyEvent(new KeyEvent(
         android.os.SystemClock.uptimeMillis(),
         android.os.SystemClock.uptimeMillis(),
