@@ -70,11 +70,9 @@ public final class KeycodeConvertor {
       // Back
       case 112: return KeyEvent.KEYCODE_BACK;
       // Home
-      case 91: return KeyEvent.KEYCODE_HOME;
+      case 113: return KeyEvent.KEYCODE_HOME;
       // Menu
-      case 113: return KeyEvent.KEYCODE_MENU;
-      // Search
-      case 114: return KeyEvent.KEYCODE_SEARCH;
+      case 114: return KeyEvent.KEYCODE_MENU;
       // Play, Previous, Next
       case 117: return KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE;
       case 118: return KeyEvent.KEYCODE_MEDIA_PREVIOUS;
@@ -82,6 +80,8 @@ public final class KeycodeConvertor {
       // Volume Up / Down
       case 121: return KeyEvent.KEYCODE_VOLUME_UP;
       case 120: return KeyEvent.KEYCODE_VOLUME_DOWN;
+      // Search
+      case 122: return KeyEvent.KEYCODE_SEARCH;
 
       // PgUp, PgDown
       case 33: return KeyEvent.KEYCODE_PAGE_UP;
