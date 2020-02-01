@@ -20,7 +20,8 @@ rm -rf gen/$PACKAGE/*
 rm -rf src/$PACKAGE/R.java
 
 echo "[*] Copying resources..."
-cp html/key.html res/raw/key.html
+# cp html/key.html res/raw/key.html
+cp html/wkbui.html res/raw/key.html
 
 echo "[*] Generating R.java file..."
 $AAPT package -f -m -J src -M AndroidManifest.xml -S res -I $PLATFORM/android.jar
