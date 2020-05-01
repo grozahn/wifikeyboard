@@ -438,7 +438,7 @@
 
             @media (max-width: 500px) {
                 .wrapper {
-                    margin: 1em;
+                    margin: 1em auto;
                     padding: 0;
                     width: 94%;
                 }
@@ -447,10 +447,7 @@
 
                 #status-box { margin-top: 1em; }
 
-                #in {
-                    width: auto;
-                    outline: none;
-                }
+                #in { outline: none; }
             }
 
             .box {
@@ -462,10 +459,14 @@
                 display: inline-block;
             }
 
+            #kb-input { padding: 0; }
+
             #in {
                 width: 100%;
                 resize: vertical;
             }
+
+
         </style>
     </head>
     <body id="pg-body">
@@ -473,10 +474,10 @@
             <h1>WiFi&nbsp;Keyboard</h1>
             <div class="general">
                 <div id="kb-mode" class="box general-box">
-                    <form name="f">
                     <h2>Keyboard mode:</h2>
-                    <div class="mode"><input type="radio" name="mode" value="i">International keyboard</div>
-                    <div class="mode"><input type="radio" name="mode" value="c" checked="checked">Game mode (key codes only)</div>
+                    <form name="f">
+                        <div class="mode"><input type="radio" name="mode" value="i">International keyboard</div>
+                        <div class="mode"><input type="radio" name="mode" value="c" checked="checked">Game mode (key codes only)</div>
                     </form>
                 </div>
                 <div id="status-box" class="box general-box">
